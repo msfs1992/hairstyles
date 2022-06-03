@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    ErrorDocument 404 /index.php
+    RewriteRule ^admin/(.*)?$ /admin/index.php?area=$1 [NC,L,QSA]
+</IfModule>
